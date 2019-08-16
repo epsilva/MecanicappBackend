@@ -1,25 +1,22 @@
 const { Schema, model } = require('mongoose');
 
-const Carro = require('./Carro');
-
-const UsuarioSchema = new Schema({
-    uid: {
-        type: String,
-        required: true
-    },
-    nome: {
+const CarroSchema = new Schema({
+    modelo: {
         type: String,
         required: true
     },
     avatar: String,
-    email: {
+    placa: {
         type: String,
         required: true
     },
-    carro: String,
-    telefone: String
+    usuario: String,
+    marca: {
+        type: String,
+        required: true
+    },
 }, {
     timestamps: true
 });
 
-module.exports = model('Usuario', UsuarioSchema);
+module.exports = model('Carro', CarroSchema);
